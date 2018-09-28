@@ -1,0 +1,31 @@
+@model IEnumerable<aspnet_core___Copia.Models.Chamado>
+    <h1>Chamados</h1>
+    <br><br>
+    <a href="Chamados/Create" class="btn btn-success">Adicionar</a>
+    <br>
+    <a href="Chamados/ListOrder" class="btn btn-info">Ver Recentes</a>
+
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Descricao</th>
+                    <th>Horario Inicio</th>
+                    <th>Horario Fim</th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model) {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.descricaoProblema</td>
+                <td>@item.horaInicio</td>
+                <td>@item.horaFim</td>
+                <br>
+                <td><a class="btn btn-danger" href="Chamados/Delete/@item.id">Deletar</a></td>
+                <td><a class="btn btn-warning" href="Chamados/Edit/@item.id">Editar</a></td>
+            </tr>
+            }
+        </table>
+    </div>

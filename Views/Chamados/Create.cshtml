@@ -1,0 +1,34 @@
+@model aspnet_core___Copia.Models.Chamado
+
+<h1>Cadastrar Chamado</h1>
+<br>
+<div class="form-horizontal">
+    <form action="Create" method="Post">
+
+        <br>
+
+        <div class="form-group">
+            <label>Id</label>
+            <input  class="form-control" type="text" name="id" required=""/>
+        </div>
+
+        <div class="form-group">
+            <label>Descricao do Problema</label>
+            <input  class="form-control" type="text" name="descProblema" required=""/>
+        </div>
+
+        <div class="form-group">
+            <label>Hora Inicio</label>
+            <input  class="form-control" type="datetime-local" name="horaInicio"  required=""/>
+        </div>
+
+        <div class="form-group">
+            <label>Hora Fim</label>
+            <input  class="form-control" type="datetime-local" name="horaFim" required=""/>
+        </div>
+
+        <input  class="btn btn-success" 
+                type="submit" value="Salvar"/>
+
+    </form>
+</div>

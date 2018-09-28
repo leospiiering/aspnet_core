@@ -1,0 +1,36 @@
+@model IEnumerable<aspnet_core___Copia.Models.Chamado>
+@{
+    ViewBag.Title = "Título da página";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Numero Chamado</th>
+                    <th>Numero Solicitante</th>
+                    <th>Descricao</th>
+                    <th>Email</th>
+                    <th>Horario Inicio</th>
+                    <th>Horario Fim</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+
+            @foreach (var item in Model) {
+
+            <tr>
+                <td>@item.numCall</td>
+                <td>@item.numPerson</td>
+                <td>@item.email</td>
+                <td>@item.horaInicio</td>
+                <td>@item.descProblema</td>
+                <td>@item.horaFim</td>
+                <td>@item.phone</td>
+                <td>@item.duracao</td>
+                <td><a class="btn btn-danger" href="Chamados/Delete/@item.id">Deletar</a></td>
+                <td><a class="btn btn-primary" href="Chamados/Edit/@item.id">Editar</a></td>
+            </tr>
+            }
+        </table>
+    </div>

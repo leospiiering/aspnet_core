@@ -1,0 +1,60 @@
+@model aspnet_core___Copia.Models.Chamado
+<h1>Edição de chamados</h1>
+<br>
+<div class="form-horizontal">
+    <form action="Edit" method="Post">
+    
+        <div class="form-group">
+            <label>Id</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="id"
+                    value="@model.id"
+                    readonly/>
+        </div>
+
+        <div class="form-group">
+            <label>Descricao do Problema</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="descProblema"
+                    value="@model.descProblema"/>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="email"
+                    value="@model.email"/>
+        </div>
+
+        <div class="form-group">
+            <label>Hora Inicio</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="horaInicio"
+                    value="@model.horaInicio"/>
+        </div>
+
+        <div class="form-group">
+            <label>Hora Fim</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="horaFim"
+                    value="@model.horaFim"/>
+        </div>
+
+        <div class="form-group">
+            <label>Telefone</label>
+            <input  class="form-control"
+                    type="text" 
+                    name="phone"
+                    value="@model.phone"/>
+        </div>
+
+        <input  class="btn btn-warning" 
+                type="submit" value="Editar"/>
+
+    </form>
+</div>
